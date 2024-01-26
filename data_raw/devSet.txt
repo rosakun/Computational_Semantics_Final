@@ -1,0 +1,302 @@
+Sentence: I was searching some full movies in youtube, and some are removed by youtube.
+
+person.n.01    EQU speaker                      % I was             
+search.v.01    Agent -1 Theme +2 Destination +3 % searching         
+full.a.01      AttributeOf +1                   % some full         
+movie.n.01                                      % movies in         
+youtube.n.01                                    % youtube, and      
+               CONTINUATION <1                  %                   
+some.n.01                                       % some are         
+remove.v.01    Theme -1 Instrument +1           % removed by        
+youtube.n.01                                    % youtube,          
+               CONTINUATION <3                  %  
+
+
+Sentence: Why is the challenge of education unmet in so many countries? Some are simply too poor to provide decent schools.
+
+reason.n.01          Name ?                                               % Why                                                                                             
+be.v.01              Location -1 Time +1 Co-Theme +2 Theme +4 Location +5 % is                                                                                              
+time.n.08            EQU now                                              %                                                                                                 
+challenge.n.01       PartOf +1                                % the challenge of                                                                                
+education.n.01                                                      % education                                                                                       
+unmet.n.01                                                           % unmet in                                                                                        
+so.r.01              Quantity ?                                       % so many                                                                                         
+country.n.01         EQU -1                                         % countries?                                                                                      
+                     CONTINUATION <1                                      %                                                                                                 
+some.n.01                                                                 % Some                                                                                            
+time.n.08            EQU now                                              % are                                                                                             
+simply.a.01                                                             % simply                                                                                          
+too.r.01                                                                  % too                                                                                             
+poor.a.01            Time -3 Manner -2 Agent -4 Degree -1 Topic +1     % poor to                                                                                         
+provide.v.01         Agent -5 Theme +2                                 % provide                                                                                         
+decent.a.01          AttributeOf +1                                     % decent                                                                                          
+school.n.01                                                           % schools.                                                                                        
+                     CONTINUATION <1                                      %     
+
+
+Sentence: If you need money, I'll lend you some.
+
+person.n.01 EQU hearer                             % If you [0-6]
+need.v.02   Pivot -1 Time +1 Theme +2              % need   [7-11]
+time.n.08   EQU now                                %        
+money.n.01                                         % money, [12-18]
+            CONSEQUENCE <1                         %        
+person.n.01 EQU speaker                            % I      [19-20]
+time.n.08   TSU now                                % 'll    [20-23]
+lend.v.02   Agent -2 Time -1 Recipient +1 Theme +2 % lend   [24-28]
+person.n.01 EQU hearer                             % you    [29-32]
+money.n.01                                         % some.  [33-38]
+
+
+Sentence: We're out of tissue paper, so I've got to go buy some. 
+      
+person.n.01       Sub speaker                           % We               [0-2]
+be.v.01           Participant -1 Time +1 Experiencer +2 % 're              [2-5]
+time.n.08         EQU now                               %                  
+out.a.01          Stimulus +1                           % out of           [6-12]
+tissue_paper.n.01                                       % tissue paper, so [13-29]
+                  CONTINUATION <1                       %                  
+person.n.01       EQU speaker                           % I've             [30-34]
+get.v.01          Pivot -1 Time +1 Theme +2             % got to           [35-41]
+time.n.08         TPR now                               %                  
+go.v.01           Experiencer -3 Stimulus +1            % go               [42-44]
+buy.v.01          Agent -4 Theme +1                     % buy              [45-48]
+some.n.01                                               % some.            [49-54]
+
+
+Sentence: If you need any money, I'll lend you some.
+
+person.n.01 EQU hearer                             % If you   [0-6]
+need.v.01   Pivot -1 Time +1 Theme +2              % need any [7-15]
+time.n.08   EQU now                                %          
+money.n.01                                         % money,   [16-22]
+            CONSEQUENCE <1                         %          
+person.n.01 EQU speaker                            % I        [23-24]
+time.n.08   TSU now                                % 'll      [24-27]
+lend.v.01   Agent -2 Time -1 Recipient +1 Theme +2 % lend     [28-32]
+person.n.01 EQU hearer                             % you      [33-36]
+some.n.01                                          % some.    [37-42]
+
+
+many
+
+
+
+Sentence: Thanks to these connections ,numerous young Belgians were able to escape to  Switzerland , although  many did not succeed until after they had been sent back into occupied France several times .
+
+thanks.n.01     Recipient +1 Recipient +3       % Thanks to                   [0-9]
+connection.n.01                                 % these connections, numerous [10-37]
+young.a.01      AttributeOf +1                  % young                       [38-43]
+person.n.01     Quantity + Source +1            % Belgians                    [44-52]
+location.n.01   Name "Belgians"                 %                             
+time.n.08       TPR now                         % were                        [53-57]
+able.a.01       Agent -6 Time -1 Topic +1       % able to                     [58-65]
+escape.v.01     Theme -7 Destination +1         % escape to                   [66-75]
+location.n.01   Name "Switzerland"              % Switzerland, although       [76-97]
+                CONTINUATION <1                 %                             
+measure.n.02    Quantity ?                      % many                        [98-102]
+                NEGATION <1                     %                             
+time.n.08       TPR now                         % did not                     [103-110]
+succeed.v.01    Agent -2 Time -1 Experiencer +1 % succeed                     [111-118]
+entity.n.01     Stimulus +1                     % until after                 [119-130]
+person.n.01                                     % they had                    [131-139]
+                CONTRAST <1                     %                             
+time.n.08       TPR now                         % been                        [140-144]
+send.v.01       Time -1 Theme +2 Destination +3 % sent back into              [145-159]
+occupied.a.01   AttributeOf +1                  % occupied                    [160-168]
+location.n.01   Name "France"                   % France                      [169-175]
+time.n.01       Quantity +                      % several times.              [176-190]
+
+
+			
+
+Most
+
+
+
+Sentence: elections were held on different dates, most on 10 June with a second round on 24 June.
+
+election.n.01     Quantity -3 Location -2                                                                    % elections              [23-32]
+time.n.08         TPR now                                                                                % were                   [33-37]
+hold.v.01         Theme -2 Time -1 Location +2 Location +5 Time +8 Time +9 Instrument +10 Instrument +11 % held on                [38-45]
+different.a.01    AttributeOf +1                                                                         % different              [46-55]
+date.n.01                                                                                                % dates;                 [56-62]
+most.a.01         Degree +1                                                                              % most on                [63-70]
+most.r.01                                                                                                %                        
+entity.n.01       Attribute -2                                                                           %                        
+time.n.08         DayOfMonth 10 EQU +2                                                                   % 10                     [71-73]
+time.n.08         DayOfMonth 10 EQU +2                                                                   %                        
+time.n.08         MonthOfYear 6                                                                          % June, with a second    [74-93]
+time.n.08         MonthOfYear 6                                                                          %                        
+round.n.01        Order 2 Time +4                                                                        % round on               [94-102]
+round.n.01        Order 2 Time +4                                                                        %                        
+time.n.08         DayOfMonth 24 EQU +2                                                                   % 24                     [103-105]
+time.n.08         DayOfMonth 24 EQU +2                                                                   %                        
+time.n.08         MonthOfYear 6                                                                          % June. In               [106-114]
+time.n.08         MonthOfYear 6                                                                          %                        
+                  CONTINUATION <1        
+
+
+
+SEVERAL
+
+
+Sentence: The police cracked down on young people and took hundreds into custody . Several died , apparently from  beatings . 
+
+police.n.01                                                                                % police                    [894-900]
+crack.v.01                Theme -1 Time +1 Path +2                                         % cracked                   [901-908]
+time.n.08                 TPR now                                                          %                           
+entity.n.01               Theme +2                                                         % down on                   [909-916]
+young.a.01                AttributeOf +1                                                   % young                     [917-922]
+person.n.01                                                                                % people and                [923-933]
+take.v.01                 Agent -6 Time +1 Theme +2 Destination +3                         % took                      [934-938]
+time.n.08                 TPR now                                                          %                           
+measure.n.02              Quantity 200                                                     % hundreds into             [939-952]
+custody.n.01                                                                               % custody.                  [953-961]
+                          CONTINUATION <1                                                  %                           
+measure.n.02              Quantity +                                                       % Several                   [963-970]
+die.v.01                  Patient -1 Time +1 Manner +2 Source +3                           % died,                     [971-976]
+time.n.08                 TPR now                                                          %                           
+apparently.a.01                                                                            % apparently from           [977-992]
+beating.n.01                                                                               % beatings.                 [993-1002]
+                          CONTINUATION <1   
+
+
+
+
+
+
+One
+
+Sentence: If you need an umbrella I 'll lend you one .
+
+person.n.01   EQU hearer                             % If you      [0-6]
+need.v.02     Pivot -1 Time +1 Theme +2              % need        [7-11]
+time.n.08     EQU now                                %             
+umbrella.n.01                                        % an umbrella [12-23]
+              CONSEQUENCE <1                         %             
+person.n.01   EQU speaker                            % I           [24-25]
+time.n.08     TSU now                                % 'll         [25-28]
+lend.v.02     Agent -2 Time -1 Recipient +1 Theme +2 % lend        [29-33]
+person.n.01   EQU hearer                             % you         [34-37]
+umbrella.n.01                                        % one.        [38-42]
+
+
+Sentence: I have two cats, one is white and the other is black .	
+
+person.n.01   EQU speaker               % I         [0-1]
+have.v.01     Pivot -1 Time +1 Theme +3 % have      [2-6]
+time.n.08     EQU now                   %           
+quantity.n.01 EQU 2                     % two       [7-10]
+cat.n.01      Quantity -1               % cats:     [11-16]
+              CONTINUATION <1           %           
+person.n.01                             % one       [17-20]
+time.n.08     EQU now                   % is        [21-23]
+white.a.01    ColourOf -2 Time -1       % white and [24-33]
+              CONTINUATION <1           %           
+entity.n.01                             % the other [34-43]
+time.n.08     EQU now                   % is        [44-46]
+black.a.01    ColourOf -2 Time -1       % black.    [47-53]
+
+
+
+
+Any
+
+Sentence: Will you read my essay and correct the mistakes , if any ?
+
+time.n.08    TSU now                     % Will             [0-4]
+time.n.08    TSU now                     %                  
+person.n.01  EQU hearer                  % you              [5-8]
+read.v.01    Time -3 Agent -1 Theme +2   % read             [9-13]
+person.n.01  EQU speaker                 % my               [14-16]
+essay.n.01   User -1                     % essay and        [17-26]
+correct.a.01 Time -5 Agent -4 Patient +1 % correct          [27-34]
+mistake.n.01 Participant +1              % the mistakes, if [35-51]
+any.n.01                                 % any?             [52-56]
+			
+
+Sentence: What color is your underwear ? I 'm not wearing any.
+
+event.v.01     Participant +1               %             
+color.n.01                                  % "What color [0-11]
+be.v.01        Theme -1 Time +1 Co-Theme +3 % is          [12-14]
+time.n.08      EQU now                      %             
+person.n.01    EQU hearer                   % your        [15-19]
+underwear.n.01 User -1                      % underwear?" [20-31]
+               CONTINUATION <1              %             
+person.n.01    EQU speaker                  % "I          [32-34]
+               NEGATION <1                  %             
+time.n.08      EQU now                      % 'm not      [34-40]
+wear.v.01      Agent -2 Time -1 Theme +1    % wearing     [41-48]
+any.n.01                                    % any."       [49-54]
+			
+
+Sentence: May I have some more tea if there is any in the pot ?
+
+              POSSIBILITY <1                      %                  
+person.n.01   EQU speaker                         % May I            [0-5]
+have.v.01     Pivot -1 Theme +1                   % have             [6-10]
+more_tea.n.01                                     % some more tea if [11-27]
+              PRECONDITION <1                     %                  
+entity.n.01                                       % there            [28-33]
+be.v.01       Time +1 EQU -1 Theme +2 Location +3 % is               [34-36]
+time.n.08     EQU now                             %                  
+any.n.01                                          % any in           [37-43]
+pot.n.01                                          % the pot?         [44-52]
+
+
+
+Sentence: I want some milk , but there is n't any in the refrigerator
+
+person.n.01          EQU speaker               % I                 [0-1]
+want.v.01            Pivot -1 Time +1 Theme +2 % want              [2-6]
+time.n.08            EQU now                   %                   
+milk.n.01                                      % some milk, but    [7-21]
+                     CONTRAST <1               %                   
+entity.n.01                                    % there             [22-27]
+                     NEGATION <1               %                   
+any.n.01             Location +1               % any in            [34-40]
+refrigerator.n.01                              % the refrigerator. [41-58]
+terra_incognita.n.03 EQU -3 EQU now            % isn't             [28-33]
+terra_incognita.n.03 EQU -4 EQU -3 EQU -1      %                   
+
+
+
+Sentence: our greatest success until  now we have always succeeded in creating problems where there were n't any before 
+
+person.n.01          EQU hearer                       %                
+person.n.01          EQU speaker                      % Let me         [0-6]
+say.v.01             Agent -2 Participant -1 Topic +1 % say a few      [7-16]
+word.n.01            Quantity - Topic +4              % words about    [17-28]
+person.n.01          Sub speaker                      % our            [29-32]
+great.a.01           Degree +1                        % greatest       [33-41]
+most.r.01                                             %                
+success.n.01         User -3 Attribute -2             % success: until [42-56]
+                     CONTINUATION <1                  %                
+                     NEGATION <1                      %                
+time.n.08                                             % always         [69-75]
+                     NEGATION <1                      %                
+time.n.08            EQU now                          % now            [57-60]
+person.n.01          Sub speaker                      % we             [61-63]
+have.v.01            Finish -2 Agent -1 Topic +1      % have           [64-68]
+succeed.v.01         Agent -2 Time +1 Theme +3        % succeeded      [76-85]
+time.n.08            TPR now                          %                
+entity.n.01                                           % in             [86-88]
+create.v.01          Agent -1 Patient +1              % creating       [89-97]
+problem.n.01                                          % problems       [98-106]
+entity.n.01                                           % there          [113-118]
+                     NEGATION <1                      %                
+                     NEGATION <1                      %                
+any.n.01                                              % any before.    [127-138]
+                     NEGATION <1                      %                
+terra_incognita.n.01 Location -3 EQU -1               % where          [107-112]
+terra_incognita.n.03 EQU -3 TPR now                   % weren't        [119-126]
+terra_incognita.n.03 EQU -4 EQU -3 EQU -1             %                
+
+			
+
+
+
+                       
+

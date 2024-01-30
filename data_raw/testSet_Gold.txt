@@ -406,8 +406,7 @@ person.n.01      Quantity -1                                                    
 time.n.08        TPR now                                                                     % were                 [449-453]
 injure.v.01      Patient -2 Time -1 Duration +1 Duration +4 Manner +5 Manner +6              % injured during       [454-468]
 typhoon.n.01                                                                                 % the typhoon,         [469-481]
-most.r.01										     % most by              [482-489]
-people.a.01        Degree +1                                                              %                     
+people.a.01        Degree +1                                                                 % most by              [482-489]     
 entity.n.01      Attribute -2                                                                %                      
 fly.v.01         Agent -7 Theme +2                                                           % flying               [490-496]
 fly.v.01         Agent -8 Theme +2                                                           %                      

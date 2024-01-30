@@ -29,7 +29,7 @@
             "street.n.01                                % streets          [31-38]",
             "as_well.a.01 Theme -1                      % as well          [39-46]",
             "entity.n.01  Sub -2 Sub +1                 % and              [47-50]",
-            "street.n.01                                % some             [51-55]",
+            "street.n.01                                  % some             [51-55]",
             "have.v.01    Pivot -2 Time +1 Theme +2     % had to           [56-62]",
             "time.n.08    TPR now                       %                  ",
             "be.v.01      Agent -4 Topic +1 Stimulus +2 % be               [63-65]",
@@ -82,7 +82,7 @@
             "firm.n.01               Quantity ?                                  % firms have             [1144-1154]",
             "shrink.v.01             Agent -1 Time +1 Patient +3 Manner +4       % shrunk                 [1155-1161]",
             "time.n.08               TPR now                                     %                                                                                               ",
-            "person.n.01                                                         % their                  [1162-1167]",
+            "firm.n.01                                                         % their                  [1162-1167]",
             "balance_sheet.n.01      Creator -1                                  % balance sheets         [1168-1182]",
             "dramatically.a.01                                                   % dramatically, and of   [1183-1203]",
             "                        CONTINUATION <1                             %                                                                                               ",
@@ -129,8 +129,8 @@
             "time.n.08         TPR now                               %                   ",
             "quantity.n.01     BOT +1                                % at least five     [268-281]",
             "quantity.n.01     EQU 5                                 %                   ",
-            "person.n.01       Quantity -2 Participant +1            % others --         [282-291]",
-            "person.n.01                                               % person              [292-296]",
+            "quantity.n.01       Quantity -2 Participant +1          % others --         [282-291]",
+            "quantity.n.01                                               % some              [292-296]",
             "seriously.r.01                                          % seriously. Across [297-314]",
             "                  CONTINUATION <1                       %                   "
         ]
@@ -173,21 +173,31 @@
             "summer.n.01                                                             % the summer                                          [156-166]",
             "drive.v.01     Agent -1 Theme +1                                        % driving                                             [167-174]",
             "season.n.01                                                             % season                                              [175-181]",
-            "get.v.01       Participant -4 Theme -3 Time"
+            "get.v.01       Participant -4 Theme -3 Time +1 Attribute +"
         ]
     },
     {
         "sentence": " You can not get back all lost files successfully as some might have been overwritten.",
         "drg": [
-            " The first ellipsis is introduced by the word 'some'. In the sentence, 'some' refers to 'files'. We do not replace 'some' with 'file'. The WordNet sense corresponding to the word 'some' is 'some.n.01'. The WordNet sense corresponding to 'files' is 'file.n.01'. So, we replace 'some.n.01' with 'file.n.01'.",
             "",
-            "The second ellipsis is introduced by the word 'all'. In the sentence, 'all' refers to 'files'. We do not replace 'all' with 'file'. The WordNet sense corresponding to the word 'all' is 'all.n.01'. The WordNet sense corresponding to 'files' is 'file.n.01'. So, we replace 'all.n.01' with 'file.n.01'.",
-            "",
-            "The third ellipsis is introduced by the word 'some'. In the sentence, 'some' refers to 'files'. We do not replace 'some' with 'file'. The WordNet sense corresponding to the word 'some' is 'some.n.01'. The WordNet sense corresponding to 'files' is 'file.n.01'. So, we replace 'some.n.01' with 'file.n.01'.",
-            "",
-            "The fourth ellipsis is introduced by the word 'as'. In the sentence, 'as' refers to 'files'. We do not replace 'as' with 'file'. The WordNet sense corresponding to the word 'as' is 'entity.n.01'. The WordNet sense corresponding to 'files' is 'file.n.01'. So, we replace 'entity.n.01' with 'file.n.01'.",
-            "",
-            "The fifth ellipsis is introduced"
+            "person.n.01          EQU hearer                            % you cannot              [192-202]",
+            "                     NEGATION <1                           %                         ",
+            "                     POSSIBILITY <1                        %                         ",
+            "get.v.01             Agent -1 Theme +2 Manner +3           % get                     [203-206]",
+            "back.v.01            Theme +1                              % back                    [207-211]",
+            "file.n.01                                                  % files                   [221-226]",
+            "successfully.a.01                                          % successfully            [227-239]",
+            "file.n.01                                                  % some might have         [243-258]",
+            "                     NEGATION <1                           %                         ",
+            "all.n.01                                                   % all                     [212-215]",
+            "                     NEGATION <1                           %                         ",
+            "lose.v.01            Theme -4 Agent -1 Time +1             % lost                    [216-220]",
+            "time.n.08            TPR now                               %                         ",
+            "                     POSSIBILITY <3                        %                         ",
+            "entity.n.01                                                % as                      [240-242]",
+            "time.n.08            TPR now                               % been                    [259-263]",
+            "overwrite.v.01       Patient -6 Participant -2 Time -1     % overwritten.            [264-276]",
+            "terra_incognita.n.01 EQU -11 Co-Theme -3                   %                         "
         ]
     },
     {
@@ -325,7 +335,23 @@
     {
         "sentence": " I want to buy some new memory, should I buy some for the same kind of slot that I already have?",
         "drg": [
-            " In the first sentence, 'I' is the speaker, so we replace 'person.n.01' with 'speaker'. In the second sentence, 'want' is the main verb and 'I' is the pivot, so we replace 'person.n.01' with 'speaker' and add 'Pivot -1' to indicate the relationship between the pivot and the main verb. In the third sentence, 'now' is equivalent to 'time.n.08', so we replace 'time.n.08' with 'now'. In the fourth sentence, 'I' is the agent and 'buy' is the main verb, so we replace 'person.n.01' with 'speaker' and add 'Agent -1' to indicate the relationship between the agent and the main verb. In the fifth sentence, 'some' refers to 'memory', so we replace 'some.n.01' with 'memory.n.01'. In the sixth sentence, we add the 'CONSEQUENCE <1' and 'NECESSITY <1' tags to indicate the relationship between the previous sentence and the current one. In the seventh sentence, we replace 'person.n.01' with 'speaker' and add 'Agent -1' to indicate the relationship between the agent and the main verb. In the eighth sentence, 'some' refers to 'slot', so we replace 'some.n.01' with 'slot.n.01'. In the ninth sentence, 'that' refers to 'I', so we replace 'person.n.01' with 'speaker'. In the tenth sentence, 'have' is the main verb and 'I' is the theme, so we replace 'person.n.01' with 'speaker'"
+            "",
+            "person.n.01      EQU speaker                             % I               [57-58]",
+            "want.v.01        Pivot -1 Time +1 Theme +2               % want to         [59-66]",
+            "time.n.08        EQU now                                 %                 ",
+            "buy.v.01         Agent -3 Theme +2                       % buy             [67-70]",
+            "new.a.01         AttributeOf +1                          % some new        [71-79]",
+            "memory.n.01                                              % memory, should  [80-94]",
+            "                 CONSEQUENCE <1                          %                 ",
+            "                 NECESSITY <1                            %                 ",
+            "person.n.01      EQU speaker                             % I               [95-96]",
+            "buy.v.01         Agent -1 Theme +1 Theme +3              % buy             [97-100]",
+            "memory.n.01                                              % some for        [101-109]",
+            "same.a.01        AttributeOf +1                          % the same        [110-118]",
+            "entity.n.01      InstanceOf +1                           % kind of         [119-126]",
+            "slot.n.01                                                % slot            [127-131]",
+            "person.n.01      EQU speaker                             % that I already  [132-146]",
+            "have.v.01        Theme -3 Pivot -1 Time +1              "
         ]
     },
     {
@@ -339,7 +365,7 @@
             "status.a.01            AttributeOf +1                               % a status                       [1224-1232]",
             "symbol.n.01                                                         % symbol, and                    [1233-1244]",
             "                       CONTINUATION <1                              %                                ",
-            "weapon.n.01                                                           % some                           [1245-1249]",
+            "state.n.01                                                           % some                           [1245-1249]",
             "view.v.01              Agent -1 Theme +1 Theme +3                   % view                           [1250-1254]",
             "person.n.01                                                         % them                           [1255-1259]",
             "entity.n.01                                                         % as                             [1260-1262]",
@@ -347,22 +373,6 @@
             "ultimate.n.01                                                       % the ultimate                   [1272-1284]",
             "entity.n.01            Theme -1 Theme +2                            % deterrent against              [1285-1302]",
             "nuclear.a.01           Attribute"
-        ]
-    },
-    {
-        "sentence": "Would it be ethical to sacrifice one person to save many ?",
-        "drg": [
-            "",
-            "person.n.01                                     %            ",
-            "time.n.08      TSU now                          % Would      [0-5]",
-            "person.n.01                                     % it         [6-8]",
-            "person.n.01                                     % be         [9-11]",
-            "ethical.a.01   Time -3 AttributeOf -2 Theme +1  % ethical to [12-22]",
-            "sacrifice.v.01 Agent -5 Theme +2                % sacrifice  [23-32]",
-            "person.n.01                                     % one        [33-36]",
-            "person.n.01    Theme -1                         % person to  [37-46]",
-            "save.v.01      Agent -5 Participant -3 Theme +1 % save       [47-51]",
-            "measure.n.02   Quantity ?                       % many?      [52-57]"
         ]
     },
     {
@@ -374,8 +384,9 @@
             "time.n.08        TPR now                                                                     % were                 [449-453]",
             "injure.v.01      Patient -2 Time -1 Duration +1 Duration +4 Manner +5 Manner +6              % injured during       [454-468]",
             "typhoon.n.01                                                                                 % the typhoon,         [469-481]",
-            "entity.n.01      Attribute -2                                                                % most by              [482-489]",
-            "entity.n.01                                                                                    %                      ",
+            "person.n.01      Degree +1                                                                   % most by              [482-489]",
+            "most.r.01                                                                                    %                      ",
+            "entity.n.01      Attribute -2                                                                %                      ",
             "fly.v.01         Agent -7 Theme +2                                                           % flying               [490-496]",
             "fly.v.01         Agent -8 Theme +2                                                           %                      ",
             "debris.n.01                                                                                  % debris.              [497-504]",
@@ -384,26 +395,6 @@
     },
     {
         "sentence": " Some people go to places like Shanghai but most go to the squatter cities where aesthetics rule.",
-        "drg": [
-            "",
-            "person.n.01                                                            % Some people                 [564-575]",
-            "go.v.01                   Theme -1 Destination +1                      % go to                       [576-581]",
-            "place.n.01                Location +1                                  % places like                 [582-593]",
-            "location.n.01             Name \"Shanghai\"                              % Shanghai but                [594-606]",
-            "                          CONTRAST <1                                  %                             ",
-            "place.n.01                 Degree +1                                    % most                        [607-611]",
-            "most.r.01                                                              %                             ",
-            "entity.n.01               Attribute -2                                 %                             ",
-            "go.v.01                   Theme -1 Destination +2                      % go to                       [612-617]",
-            "squatter.n.01                                                          % the squatter                [618-630]",
-            "city.n.01                 Theme -1                                     % cities where                [631-643]",
-            "aesthetics.n.01                                                        % aesthetics                  [644-654]",
-            "rule.v.01                 Time -2 Theme -1                             % rule.                       [655-664]",
-            "                          CONTINUATION <1                              %"
-        ]
-    },
-    {
-        "sentence": "Gaming Mice are more sensitive and can be  customized extensively  most also have customizable buttons and  weights.",
         "drg": [
             "",
             "gaming.v.01       Equal +1                                         % Gaming                  [133-139]",
@@ -415,20 +406,38 @@
             "entity.n.01                                                        %                         ",
             "customize.v.01    Theme -1 Time +1                                 % customized              [175-185]",
             "time.n.08         TPR now                                          %                         ",
-            "sensitive.a.01    Degree +1                                        % most also               [198-207]",
-            "most.r.01                                                          %                         ",
-            "entity.n.01       Attribute -2                                     %                         ",
-            "                  POSSIBILITY <1                                   %                         ",
-            "time.n.08         EQU now                                          % be                      [172-174]",
-            "extensively.r.01  Participant -6 Pivot -2 Time -1 Time +2 Theme +5 % extensively             [186-197]",
-            "have.v.01         EQU -1                                           % have                    [208-212]",
-            "time.n.08"
+            "sensitive.a.01    AttributeOf -3 Time -2 Degree -1                 % sensitive and can       [198-207]",
+            "                  CONTINUATION <1                                  %                         ",
+            "entity.n.01                                                        %                         ",
+            "customize.v.01    Theme -1 Time +1                                 % customized              [175-185]",
+            "time.n.08         TPR now                                          %                         ",
+            ""
         ]
     },
     {
         "sentence": " In every city , in most towns , along the Front , each political faction had its newspaper-sometimes several .",
         "drg": [
-            " The negation is introduced by the word 'not'. In the sentence, 'not' refers to 'in most'. We do not replace 'not' with 'in most'. The WordNet sense corresponding to the word 'not' is 'negation.n.01'. We replace 'negation.n.01' with 'city.n.01'. However, we also need to add the attribute 'NEGATION' to the sense 'city.n.01'. So, the final replacement is 'city.n.01 NEGATION <1'."
+            "",
+            "                    NEGATION <1                          %                             ",
+            "political.a.01       AttributeOf +1                       % political                   [52-61]",
+            "faction.n.01                                              % faction                     [62-69]",
+            "                     NEGATION <1                          %                             ",
+            "have.v.01            Pivot -1 Time +1 Theme +2            % had its newspaper-sometimes [70-97]",
+            "time.n.08            TPR now                              %                             ",
+            "some.n.01            Quantity +                           % some.                       [98-106]",
+            "                     NEGATION <1                          %                             ",
+            "city.n.01                                                 % city, in most               [9-22]",
+            "                     NEGATION <1                          %                             ",
+            "terra_incognita.n.01 EQU -4 Location -1                   % In every                    [0-8]",
+            "                     NEGATION <5                          %                             ",
+            "political.a.01       AttributeOf +1                       %                             ",
+            "faction.n.01                                              %                             ",
+            "                     NEGATION <1                          %                             ",
+            "town.n.01            Attribute + EQU +1                   % towns, along                [23-35]",
+            "organization.n.01    Name \"Front\"                         % the Front, each             [36-51]",
+            "have.v.01            Pivot -3 Context -2 Time +1 Theme +2 %                             ",
+            "time.n.08            TPR now                              %                             ",
+            "some.n.01            Quantity +                           % some."
         ]
     },
     {
@@ -445,7 +454,13 @@
             "researcher.n.01                              %              ",
             "                CONTINUATION <1              %              ",
             "researcher.n.01                              % one          [35-38]",
-            "be.v.01         Theme -"
+            "be.v.01         Theme -1 Time +2 Co-Theme +4 % is           [39-41]",
+            "be.v.01         Theme -2 Time +2 Co-Theme +6 %              ",
+            "time.n.08       EQU now                      %              ",
+            "time.n.08       EQU now                      %              ",
+            "person.n.01     Role +1                      % a linguist,  [42-53]",
+            "linguist.n.01                                %              ",
+            "person.n.01     NEQ +1 Role +3               % the"
         ]
     },
     {
@@ -455,7 +470,7 @@
             "person.n.01 EQU hearer                             % If you [0-6]",
             "want.v.01   Pivot -1 Time +1 Theme +2              % want   [7-11]",
             "time.n.08   EQU now                                %        ",
-            "one.n.01                                           % one pen, [12-18]",
+            "pen.n.01                                           % a pen, [12-18]",
             "            CONSEQUENCE <1                         %        ",
             "person.n.01 EQU speaker                            % I      [19-20]",
             "time.n.08   TSU now                                % will   [21-25]",
@@ -475,17 +490,10 @@
             "person.n.01   Quantity -1 Role +1          % sisters:    [14-22]",
             "sister.n.01                                %             ",
             "              CONTINUATION <1              %             ",
-            "person.n.01                                % one         [23-26]",
+            "sister.n.01                                % one         [23-26]",
             "be.v.01       Theme -1 Time +1 Co-Theme +2 % is          [27-29]",
             "time.n.08     EQU now                      %             ",
-            "person.n.01   Role +1                      % a nurse and [30-41]",
-            "nurse.n.01                                 %             ",
-            "              CONTINUATION <3              %             ",
-            "person.n.01                                % the others  [42-52]",
-            "be.v.01       Theme -1 Time +1 Co-Theme +2 % are         [53-56]",
-            "time.n.08     EQU now                      %             ",
-            "person.n.01   Role +1                      % teachers.   [57-66]",
-            "teacher.n.01                               %             "
+            "person.n.01   Role +1                      % a nurse and"
         ]
     },
     {
@@ -504,10 +512,10 @@
             "means.n.01    Theme +2                   % means              [50-55]",
             "entity.n.01                              % of                 [56-58]",
             "inform.v.01   Agent -1 Patient +2        % informing          [59-68]",
-            "warder.n.01   ANA -12                    % his                [69-72]",
-            "person.n.01   Role +1                    % brother of         [73-83]",
+            "male.n.02     ANA -12                    % his                [69-72]",
+            "warder.n.01   Role +1                    % brother of         [73-83]",
             "brother.n.01  Of -2 Of +1                %                    ",
-            "danger.n"
+            ""
         ]
     },
     {
@@ -518,16 +526,16 @@
             "see.v.01             Proposition >1 Experiencer -1 Time +1 % saw       [9-12]",
             "time.n.08            TPR now                               %           ",
             "                     CONTINUATION <0                       %           ",
-            "school.n.01                                                % that they [13-22]",
+            "person.n.01                                                % that they [13-22]",
             "                     NEGATION <1                           %           ",
             "school.n.01                                                % schools,  [30-38]",
-            "terra_incognita.n.03 EQU -2 TPR now                        % had no    [23-29]",
-            "terra_incognita.n.03 EQU -3 EQU -2 EQU -1                  %           ",
+            "school.n.01 EQU -2 TPR now                        % had no    [23-29]",
+            "school.n.01 EQU -3 EQU -2 EQU -1                  %           ",
             "                     CONTINUATION <3                       %           ",
             "female.n.02          ANA -7                                % she       [39-42]",
             "start.v.01           Agent -1 Time +1 Theme +2             % started   [43-50]",
             "time.n.08            TPR now                               %           ",
-            "school.n.01                                                % one.      [51-55]"
+            "person.n.01                                                % one.      [51-55]"
         ]
     },
     {
@@ -559,7 +567,7 @@
             "            NEGATION <1                    %                 ",
             "time.n.08   TSU now                        % wouldn't        [40-48]",
             "take.v.01   Agent -2 Time -1 Theme +1      % take            [49-53]",
-            "money.n.01                                 % any.            [54-58]"
+            "money.n.01                                 % some.           [54-58]"
         ]
     },
     {
@@ -574,7 +582,7 @@
             "person.n.01 EQU hearer                     % you            [23-26]",
             "have.v.01   Pivot -1 Time +1 Theme +2      % have           [27-31]",
             "time.n.08   EQU now                        %                ",
-            "have.v.01 Pivot -1 Time +1 Theme +2         % you have       [32-36]"
+            "time.n.08                                   % any.           [32-36]"
         ]
     },
     {
@@ -585,34 +593,31 @@
             "            NEGATION <1                                       %             ",
             "only.a.01                                                     % only        [4-8]",
             "notice.v.01 Manner -1 Proposition >1 Experiencer -2 Manner +1 % notice      [9-15]",
-            "entity.v.01 Quantity -1                                       % how         [16-19]",
             "have.v.01   Agent -3 Patient +1 Manner +2                     % having      [53-59]",
-            "any.n.01                                                      % any when    [60-68]",
+            "money.n.01                                                    % any when    [60-68]",
             "do.v.01     Agent -5 Theme +2                                 % doing       [69-74]",
             "person.n.01 EQU hearer                                        % your        [75-79]",
             "tax.n.01    User -1                                           % taxes.      [80-86]",
             "            CONTINUATION <0                                   %             ",
-            "entity.v.01 EQU ?                                             % how         [16-19]",
-            "entity.v.01 Quantity -1                                       % much money  [20-30]",
+            "money.n.01  EQU ?                                             % how         [16-19]",
+            "money.n.01 Quantity -1                                        % much money  [20-30]",
             "person.n.01 EQU hearer                                        % you could   [31-40]",
             "            POSSIBILITY <1                                    %             ",
-            "save.v.01   Theme -3 Agent -1                                 % save by not ["
+            "save.v.01   Theme -3 Agent -1                                 % save by not [41-52]"
         ]
     },
     {
         "sentence": " Be respectful to your superiors , if you have any .",
         "drg": [
+            " In the first segment, 'hearer' is introduced by the word 'you'. In the sentence, 'you' refers to 'hearers'. We do not replace 'you' with 'hearer'. The WordNet sense corresponding to the word 'you' is 'person.n.01'. The WordNet sense corresponding to 'hearers' is also 'person.n.01'. So, we do not make any changes.",
             "",
-            "person.n.01     EQU hearer                %               ",
-            "be.v.01         Agent -1 Topic +1         % Be            [0-2]",
-            "respectful.a.01 Theme -2 Destination +2   % respectful to [3-16]",
-            "person.n.01     EQU hearer                % your          [17-21]",
-            "superior.n.01   User -1                   % superiors, if [22-35]",
-            "                PRECONDITION <1           %               ",
-            "person.n.01     EQU hearer                % you           [36-39]",
-            "have.v.01       Pivot -1 Time +1 Theme +2 % have          [40-44]",
-            "time.n.08       EQU now                   %               ",
-            "time.n.08                                  % any.          [45-49]"
+            "In the second segment, 'Be' is introduced by the word 'if'. In the sentence, 'if' introduces a condition for being respectful, so we use the preposition 'PRECONDITION' to indicate this relation. The WordNet sense corresponding to 'Be' is 'be.v.01'. We do not make any changes.",
+            "",
+            "In the third segment, 'respectful' is introduced by the word 'to'. In the sentence, 'to' introduces the destination of being respectful, so we use the preposition 'Destination' to indicate this relation. The WordNet sense corresponding to 'respectful' is 'respectful.a.01'. We do not make any changes.",
+            "",
+            "In the fourth segment, 'superiors' is introduced by the word 'if'. In the sentence, 'if' introduces a condition for having superiors, so we use the preposition 'PRECONDITION' to indicate this relation. The WordNet sense corresponding to 'superiors' is 'superior.n.01'. We do not make any changes.",
+            "",
+            "In the fifth segment, 'you' is introduced by the word 'you'. In the sentence, 'you' refers to 'hearers'. We do not replace 'you' with 'hearer'. The WordNet sense corresponding to the word 'you' is"
         ]
     },
     {
@@ -621,12 +626,15 @@
             "",
             "person.n.01  EQU speaker                        % I                               [0-1]",
             "think.v.01   Proposition >1 Agent -1 Time +1    % think                           [2-7]",
-            "time.n.08    EQU now                            % now                             [8-11]",
+            "now.n.01    EQU now                            %                                 ",
             "             CONTINUATION <0                    %                                 ",
-            "person.n.01  EQU speaker                        % I                               [12-13]",
-            "time.n.08    TSU now                            % would                           [14-19]",
-            "have.v.01    Pivot -2 Time -1 Theme +1          % have                            [20-24]",
-            "hear.v.01    Experiencer -3 Time +1"
+            "person.n.01  EQU speaker                        % I                               [8-9]",
+            "now.n.01    TSU now                            % would                           [10-15]",
+            "have.v.01    Pivot -2 Time -1 Theme +1          % have                            [16-20]",
+            "hear.v.01    Experiencer -3 Time +1 Stimulus +2 % heard                           [21-26]",
+            "now.n.01    TPR now                            %                                 ",
+            "person.n.01  Role +1                            % gunshots if there had been any. [27-58]",
+            "gunshot.n.01                                    %                   "
         ]
     },
     {
@@ -647,12 +655,12 @@
         "sentence": " Now is as good a time as any .\t",
         "drg": [
             "",
-            "time.n.08 EQU now                                              % Now       [0-3]",
-            "time.n.08 EQU now                                              % is        [4-6]",
-            "time.n.01   Theme +2                                             % as        [7-9]",
+            "good.a.01 EQU now                                              % Now       [0-3]",
+            "good.a.01 EQU now                                              % is        [4-6]",
+            "as.r.01   Theme +2                                             % as        [7-9]",
             "good.a.01 Time -3 Time -2 Degree -1 AttributeOf +1 Co-Theme +2 % good      [10-14]",
-            "time.n.01                                                      % a time as [15-24]",
-            "time.n.01                                                      % any.      [25-29]"
+            "good.a.01                                                      % a time as [15-24]",
+            "good.a.01                                                      % any.      [25-29]"
         ]
     },
     {
@@ -685,7 +693,7 @@
             "box.n.01       MadeOf -1                          % box, if      [47-54]",
             "               PRECONDITION <1                    %              ",
             "deposit.n.01                                      % deposit      [39-46]",
-            "box.n.01                                          % any          [55-58]",
+            "deposit.n.01                                      % any          [55-58]",
             "time.n.08      EQU now                            % are          [59-62]",
             "available.a.01 AttributeOf -2 Time -1             % available.   [63-73]"
         ]
@@ -710,13 +718,13 @@
             "",
             "person.n.01 EQU speaker               % I            [0-1]",
             "need.v.01   Pivot -1 Time +1 Theme +2 % need         [2-6]",
-            "time.n.08   EQU now                   %              ",
-            "butter.n.01                           % some butter. [7-19]",
-            "            CONTINUATION <1           %              ",
-            "time.n.08   EQU now                   % Do           [20-22]",
-            "person.n.01 EQU hearer                % you          [23-26]",
-            "have.v.01   Time -2 Pivot -1 Theme +1 % have         [27-31]",
-            "butter.n.01                           % any?         [32-36]"
+            "time.n.08   EQU now                   %              [7-9]",
+            "butter.n.01                           % some butter. [10-22]",
+            "            CONTINUATION <1           %              [23-24]",
+            "time.n.08   EQU now                   % Do           [25-27]",
+            "person.n.01 EQU hearer                % you          [28-31]",
+            "have.v.01   Time -2 Pivot -1 Theme +1 % have         [32-36]",
+            "butter.n.01                           % any?         [37-41]"
         ]
     },
     {
@@ -728,7 +736,7 @@
             "            CONTINUATION <0            %            ",
             "good.a.01   AttributeOf +1 Co-Theme +2 % good       [10-14]",
             "place.n.01                             % a place as [15-25]",
-            "place.n.01                             % any.       [26-30]"
+            "place.n.01                             % place      [26-30]"
         ]
     }
 ]

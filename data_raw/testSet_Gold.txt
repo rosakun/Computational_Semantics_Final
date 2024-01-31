@@ -745,7 +745,7 @@ deposit.n.01                                      % deposit      [39-46]
 box.n.01       MadeOf -1                          % box, if      [47-54]
                PRECONDITION <1                    %              
 deposit.n.01                                      % any          [55-58]
-box.n.01                                          %           
+box.n.01       MadeOf -1                                   %           
 time.n.08      EQU now                            % are          [59-62]
 available.a.01 AttributeOf -2 Time -1             % available.   [63-73]
 
